@@ -27,6 +27,7 @@ function initializeTodoList() {
         spanIndex.className = 'index';
 
         const input = document.createElement('input');
+        input.className = 'form-control';
         input.type = 'text';
 
         const span = document.createElement('span');
