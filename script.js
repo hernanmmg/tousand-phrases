@@ -1,7 +1,8 @@
 let data;
-
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const url = "https://raw.githubusercontent.com/hernanmmg/tousand-phrases/master/data.json";
 // Cargar datos desde data.json
-fetch('./data.json')
+fetch(proxyUrl + url)
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
@@ -15,7 +16,7 @@ function initializeTodoList() {
     const todoList = document.getElementById('todo-list');
 
     // Generar TODO list basado en el JSON
-    Object.keys(data[0]).forEach((key, index) => {
+    Object.keys(data).forEach((key, index) => {
         const respuesta = data[0][key];
 
         const div = document.createElement('div');

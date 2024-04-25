@@ -22,3 +22,8 @@ h1 {
 .todo-item.fail {
     color: red;
 }
+
+.index {
+    width: 30px;
+    display: inline-block;
+}
